@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.scss';
 import { Route, Routes } from 'react-router';
+import Layout from './components/Layout';
 
 function App() {
   return (
