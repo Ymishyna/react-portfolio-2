@@ -1,16 +1,18 @@
+import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
-// import { useState } from 'react'
-import LogoY from '../../assets/images/logo-y.png';
+import logoY from '../../assets/images/logo-y.png';
+// import LogoS from '../../assets/images/logo-s.png';
+// import LogoSubtitle from '../../assets/images/logo_sub.png';
 import { faEnvelope, faHome, faMailForward, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { Link, NavLink } from 'react-router-dom';
-
 
 const Sidebar = () => (
     <div className="nav-bar">
         <Link className="logo" to="/">
-            <img src={LogoY} alt="logo" />
+            <img src={logoY} alt="logo" />
+            {/* <img src={LogoS} alt="logo" />
+            <img className="sub-logo" src={LogoSubtitle} alt="mishyna" /> */}
         </Link>
         <nav>
             <NavLink exact="true" activeclassname="active" to="/">
