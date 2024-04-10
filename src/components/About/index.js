@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngular, faGitAlt, faHtml5, faCss3, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5, faCss3, faJsSquare, faReact, faNode, faNpm } from '@fortawesome/free-brands-svg-icons'
 
 
 const About = () => {
@@ -40,22 +40,22 @@ const About = () => {
             <div className='stage-cube-cont'>
                 <div className='cubespinner'>
                     <div className='face1'>
-                        <FontAwesomeIcon icon={faAngular} color='#DD0031' />
+                        <FontAwesomeIcon icon={faNpm} color='#DD0031' />
                     </div>
                     <div className='face2'>
-                        <FontAwesomeIcon icon={faHtml5} color='#DD0031' />
+                        <FontAwesomeIcon icon={faHtml5} color='#F06529' />
                     </div>
                     <div className='face3'>
-                        <FontAwesomeIcon icon={faCss3} color='#DD0031' />
+                        <FontAwesomeIcon icon={faCss3} color='#28A4D9' />
                     </div>
                     <div className='face4'>
-                        <FontAwesomeIcon icon={faReact} color='#DD0031' />
+                        <FontAwesomeIcon icon={faReact} color='#5ED4F4' />
                     </div>
                     <div className='face5'>
-                        <FontAwesomeIcon icon={faJsSquare} color='#DD0031' />
+                        <FontAwesomeIcon icon={faJsSquare} color='#EFD81D' />
                     </div>
                     <div className='face6'>
-                        <FontAwesomeIcon icon={faGitAlt} color='#DD0031' />
+                        <FontAwesomeIcon icon={faNode} color='#EC4D28' />
                     </div>
 
                 </div>
