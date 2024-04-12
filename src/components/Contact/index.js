@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-// import Loader from 'react-loaders'
+import Loader from 'react-loaders'
 // import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
@@ -108,8 +108,19 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
+                <div className='info-map'>
+                    Yana Mishyna,
+                    <br />
+                    USA,
+                    <br />
+                    East Princeton Street,
+                    <br />    
+                    Orlando, FL 32804
+                    <br />
+                    <span>yana.mishina.92@gmail.com</span>
+                </div>
             </div>
-            {/* <Loader type="pacman" active /> */}
+            <Loader type="pacman" active />
 
 
         </>
