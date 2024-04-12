@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
+import { MapContainer, Marker, TileLayer, Popup } from 'react-leaflet'
 
 
 
@@ -19,22 +19,6 @@ const Contact = () => {
             setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
-
-    // const sendEmail = (e) => {
-    //     e.preventDefault()
-
-    //     emailjs.sendForm('gmail', 'service_efqw5ha', refForm.current, '1MFHc33ehygIIlgnl')
-
-    //         .then(
-    //             () => {
-    //                 alert('Message successfully sent!')
-    //                 window.location.reload(false)
-    //             },
-    //             () => {
-    //                 alert('Failed to send the message, please try again')
-    //             }
-    //         )
-    // }
 
     const sendEmail = (e) => {
         e.preventDefault()
@@ -114,10 +98,18 @@ const Contact = () => {
                     USA,
                     <br />
                     East Princeton Street,
-                    <br />    
+                    <br />
                     Orlando, FL 32804
                     <br />
                     <span>yana.mishina.92@gmail.com</span>
+                </div>
+                <div className='map-wrap'>
+                    <MapContainer center={[28.57144, -81.37803]} zoom={13}>
+                        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        <Marker position={[28.57144, -81.37803]}>
+                            <Popup>I live here, come over for a cup of coffee :)</Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
             </div>
             <Loader type="pacman" active />
