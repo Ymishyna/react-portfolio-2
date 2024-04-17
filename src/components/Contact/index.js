@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
+import { MapContainer, Marker, TileLayer, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import { MapContainer, Marker, TileLayer, Popup } from 'react-leaflet'
 
 
 
 const Contact = () => {
-
     const [letterClass, setLetterClass] = useState('text-animate')
     const refForm = useRef()
 
-
     useEffect(() => {
-        return setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
+
+        return () => clearTimeout(timeoutId); // Clear the timeout when component unmounts
     }, [])
 
     const sendEmail = (e) => {

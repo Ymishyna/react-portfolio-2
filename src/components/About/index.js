@@ -1,10 +1,10 @@
 
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHtml5, faCss3, faJsSquare, faReact, faNode, faNpm } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
+import './index.scss'
 
 
 const About = () => {
@@ -12,15 +12,15 @@ const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
-        return setTimeout(() => {
+        const timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
+
+        return () => clearTimeout(timeoutId); // Clear the timeout when component unmounts
     }, [])
 
     return (
         <>
-
-
             <div className="container about-page">
                 <div className="text-zone">
                     <h1>
@@ -33,14 +33,13 @@ const About = () => {
                     <p>
                         I am very ambitious web developer seeking opportunities with established IT companies to leverage the latest technologies on diverse and challenging projects.
                     </p>
-                    <p>
+                    <p align="LEFT">
                         I am quietly confident, naturally curious, and continuously refining my skills by tackling web development challenges one at a time.
                     </p>
                     <p>
                         Summing up who I am in a nutshell: I'm deeply committed to my family, a proud parent of two furry companions, a lover of nature, finding solace in the ocean's embrace while riding waves, all the while deeply engrossed in the world of technology.
                     </p>
                 </div>
-
                 <div className='stage-cube-cont'>
                     <div className='cubespinner'>
                         <div className='face1'>
@@ -64,15 +63,9 @@ const About = () => {
 
                     </div>
                 </div>
-
             </div>
-            <Loader type="pacman"/>
-
+            <Loader type="pacman" />
         </>
-
-
-
-
     )
 }
 
