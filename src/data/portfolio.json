@@ -1,0 +1,22 @@
+{
+    "portfolio": [
+        {
+            "cover": "/portfolio/1/one.png",
+            "title": "Cocktail Search App",
+            "description": "React, Mongo, Express, Node",
+            "url": "https://powerful-bastion-51604-4998d80c55da.herokuapp.com/"
+        },
+        {
+            "cover": "/portfolio/2/two.png",
+            "title": "Pawfect Match",
+            "description": "React, Mongo, Express, Node",
+            "url": "https://nameless-beyond-62501-786f112efe52.herokuapp.com/"
+        },
+        {
+            "cover": "/portfolio/3/three.png",
+            "title": "GGWP",
+            "description": "API, Tailwind, Jest",
+            "url": "https://madeleinea42.github.io/moody/"
+        }
+    ]
+}
