@@ -3,16 +3,18 @@ import { Link, NavLink } from 'react-router-dom';
 import logoY from '../../assets/images/logo-y.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faHome, faUser, faEnvelope, faSuitcase, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faUser, faEnvelope, faSuitcase, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const Sidebar = () => {
+    const [showNav, setShowNav] = useState(false);
 
     return (
         <div className="nav-bar">
             <Link className="logo" to="/">
                 <img src={logoY} alt="logo" />
             </Link>
-            <nav>
+            <nav className={showNav ? 'mobile-show' : ''}>
                 <NavLink exact="true" activeclassname="active" to="/">
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
                 </NavLink>
@@ -28,6 +30,13 @@ const Sidebar = () => {
                     to="/contact">
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
+                <FontAwesomeIcon
+                onClick={() => setShowNav(false)}
+                icon={faClose}
+                color='#ffd700'
+                size='3x'
+                className='close-icon'
+                />
 
             </nav>
             <ul>
@@ -59,6 +68,7 @@ const Sidebar = () => {
                 </li>
             </ul>
             <FontAwesomeIcon
+                onClick={() => setShowNav(true)}
                 icon={faBars}
                 color='#ffd700'
                 size='3x'
