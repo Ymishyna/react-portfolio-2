@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHtml5, faCss3, faJsSquare, faReact, faNode, faNpm } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import './index.scss'
+import { Link } from 'react-router-dom'
 
 
 const About = () => {
@@ -39,6 +40,9 @@ const About = () => {
                     <p>
                         Summing up who I am in a nutshell: I'm deeply committed to my family, a proud parent of two furry companions, a lover of nature, finding solace in the ocean's embrace while riding waves, all the while deeply engrossed in the world of technology.
                     </p>
+                    <Link to="https://drive.google.com/file/d/1MrXM-0MhIw5Nx35hAYa9XaeTlZ_hS44t/view?usp=sharing" className="flat-button">
+                        MY RESUME
+                    </Link>
                 </div>
                 <div className='stage-cube-cont'>
                     <div className='cubespinner'>
