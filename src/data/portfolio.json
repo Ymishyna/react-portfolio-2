@@ -17,6 +17,12 @@
             "title": "MOOdy",
             "description": "API, Tailwind, Jest",
             "url": "https://madeleinea42.github.io/moody/"
+        },
+        {
+            "cover": "/portfolio/4/logo.svg",
+            "title": "Visionarium",
+            "description": "React, Mongo, Express, Node",
+            "url": "https://visionarium-ai-image-generator.netlify.app/"
         }
     ]
 }
